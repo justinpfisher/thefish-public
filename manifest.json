@@ -1,12 +1,12 @@
 {
   "id": "./family.html",
-  "name": "The Fishers — Family Space",
-  "short_name": "The Fishers",
+  "name": "thefish.ca \u2014 Family Space",
+  "short_name": "thefish.ca",
   "start_url": "./family.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#faf7f0",
-  "theme_color": "#174f4e",
+  "background_color": "#111318",
+  "theme_color": "#111318",
   "icons": [
     {
       "src": "assets/icon-192.png",
