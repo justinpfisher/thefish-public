@@ -591,3 +591,95 @@ summary {
 .minimal-home h1 { color: #18202d; }
 .minimal-home main > a { color: #1460c9; }
 .minimal-home :focus-visible { outline-color: #1460c9; }
+
+/* Light, touch-friendly private dashboard. */
+.app-body {
+  --ink: #182436; --text: #344256; --paper: #f7f8fa;
+  --surface: #fff; --mint: #edf3fc; --line: #e1e6ee;
+  --muted: #64748b; --accent: #1767dc;
+  color-scheme: light; background: var(--paper); color: var(--text);
+}
+.app-body .app-wrap { max-width: 1260px; padding-top: 8px; }
+.app-body .site-header { height: 88px; max-width: 1260px; }
+.app-body .app-heading { margin: 8px 0 24px; }
+.app-body .app-heading h1 { font-size: clamp(1.9rem, 4vw, 2.65rem); }
+.app-body input, .app-body select { background: #fff; border-color: #cbd5e1; color: var(--ink); min-height: 44px; }
+.app-body input[type=checkbox] { min-height: 0; width: 22px; height: 22px; margin: 0; }
+.app-body .button { color: #fff; gap: 10px; border-radius: 10px; }
+.app-body .button:hover { background: #1155ba; border-color: #1155ba; }
+.app-body .secondary { border-color: #cbd5e1; border-radius: 10px; background: #fff; }
+.app-body button:disabled { cursor: default; }
+.app-body .eyebrow { color: #577296; margin-bottom: 9px; letter-spacing: .11em; }
+.app-body :focus-visible { outline-color: #1767dc; }
+.app-body #notice:not(:empty) { position: static; background: #edf8f1; color: #166534; border-color: #c1e6cc; }
+.app-body #notice.error { background: #fff0ef; color: #9f2924; border-color: #f2bcb8; }
+.app-body .balance-card { background: #edf3fc; color: var(--ink); }
+.app-body .balance-card .eyebrow { color: #577296; }
+.app-body .status { background: #eef2f7; color: #40516a; }
+.app-body .login-card { box-shadow: 0 8px 30px #18243608; }
+.app-body .panel { border-radius: 16px; }
+.dashboard-toolbar { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.dashboard-date { width: 190px; }
+.dashboard-date input { margin-top: 5px; }
+.dashboard-summary { display: flex; gap: 22px; margin: 0 0 10px auto; font-size: .85rem; color: var(--muted); }
+.dashboard-summary strong { color: var(--ink); }
+.children-dashboard { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; align-items: start; }
+.child-dashboard-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 4px 20px #18243604; }
+.child-card-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.child-card-heading h2 { font-size: clamp(1.6rem,3vw,2rem); }
+.child-card-heading .eyebrow { font-size: .62rem; }
+.child-balance { text-align: right; }
+.child-balance strong { display: block; font-size: 2.8rem; font-weight: 750; line-height: 1.1; color: #1767dc; letter-spacing: -.05em; }
+.child-balance span { color: var(--muted); font-size: .7rem; }
+.bank-availability { margin: 16px 0 24px; font-size: .8rem; color: var(--muted); }
+.bank-availability strong { color: var(--ink); font-weight: 600; }
+.daily-routines { display: grid; gap: 14px; }
+.routine-tile { background: #f8fafc; border: 1px solid #e5eaf1; border-radius: 13px; padding: 18px; min-width: 0; }
+.routine-heading { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.routine-tile h3 { font-size: 1.15rem; letter-spacing: -.025em; }
+.routine-heading .status { margin: 0; font-size: .7rem; }
+.app-body .status.earned { background: #e6f6ec; color: #216342; }
+.routine-tile .hint { margin: 9px 0; font-size: .76rem; }
+.routine-tile .task { min-height: 44px; font-size: .88rem; gap: 12px; cursor: pointer; }
+.routine-tile .task small { display: block; font-size: .74rem; color: var(--muted); }
+.routine-approval { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 12px 0 0; margin-top: 10px; border-top: 1px solid var(--line); color: #175fbe; cursor: pointer; font-size: .86rem; }
+.waiver { margin: 0 0 4px 34px; font-size: .74rem; color: var(--muted); }
+.waiver summary { font-weight: 400; min-height: 28px; }
+.routine-tile > details:not(.waiver) { font-size: .8rem; margin-top: 10px; }
+.empty-routine { min-height: 115px; }
+.empty-routine p { font-size: .85rem; margin: 12px 0 5px; }
+.card-section { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 12px; }
+.card-section > summary { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: .85rem; color: var(--ink); }
+.card-section > summary::before { content: '+'; color: var(--muted); font-size: 1.1rem; }
+.card-section[open] > summary::before { content: '−'; }
+.count { margin-left: auto; background: #edf3fc; color: #1767dc; border-radius: 20px; padding: 2px 9px; font-size: .72rem; }
+.card-section .session h3 { font-size: 1rem; }
+.card-section .session p { font-size: .83rem; }
+.card-section .session details { font-size: .8rem; margin-top: 12px; }
+.card-section .inline-form { display: grid; grid-template-columns: 1fr 1fr; }
+.card-section .inline-form button { grid-column: 1/-1; }
+.card-section .history-row small { overflow-wrap: anywhere; }
+.card-section .routine-tile { margin-top: 12px; }
+.day-setup { margin-top: 28px; }
+.day-setup > summary { min-height: 44px; display: flex; align-items: center; font-size: 1rem; color: var(--ink); }
+.day-setup .form-grid { max-width: 780px; }
+.day-setup .form-grid button { grid-column: 1/-1; justify-self: start; }
+.app-body .check-label { min-height: 44px; }
+@media(max-width: 850px) {
+  .children-dashboard { grid-template-columns: 1fr; gap: 20px; }
+  .dashboard-summary { width: 100%; margin: 6px 0 0; justify-content: space-between; gap: 12px; }
+  .child-dashboard-card { padding: 20px; }
+  .app-body .site-header { height: 76px; }
+  .app-body .site-header.wrap { padding-inline: 20px; }
+}
+@media(max-width: 420px) {
+  .app-body .app-wrap { padding-inline: 14px; }
+  .child-dashboard-card { padding: 16px; border-radius: 16px; }
+  .routine-tile { padding: 15px; }
+  .dashboard-date { flex: 1; min-width: 0; }
+  .dashboard-summary { font-size: .76rem; }
+  .child-card-heading h2 { font-size: 1.65rem; }
+  .day-setup .form-grid { grid-template-columns: 1fr; }
+  .day-setup .form-grid button { width: 100%; }
+  .card-section .inline-form { grid-template-columns: 1fr; }
+}
