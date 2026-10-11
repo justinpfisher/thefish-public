@@ -684,3 +684,15 @@ summary {
   .day-setup .form-grid button { width: 100%; }
   .card-section .inline-form { grid-template-columns: 1fr; }
 }
+
+/* Public bank board: names and totals only. */
+.board-wrap { max-width: 960px; margin: 60px auto; padding: 0 24px 48px; }
+.board-wrap h1 { font-size: clamp(2rem,5vw,3.25rem); line-height: 1.15; letter-spacing: -.05em; }
+#board-status { color: var(--muted); font-size: .85rem; margin: 18px 0 32px; min-height: 24px; }
+.board-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.board-card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 32px; }
+.board-card h2 { font-size: 1.6rem; }
+.board-card strong { display: block; font-size: clamp(4rem,10vw,6.5rem); letter-spacing: -.06em; color: #1767dc; line-height: 1.2; margin-top: 24px; overflow-wrap: anywhere; }
+.board-card p { color: var(--muted); margin-top: 8px; }
+.board-signin { display: inline-flex; align-items: center; }
+@media(max-width:600px){ .board-wrap { margin-top: 32px; padding-inline: 20px; } .board-grid { grid-template-columns: 1fr; gap: 16px; } .board-card { padding: 24px; } .board-card strong { margin-top: 12px; } }
