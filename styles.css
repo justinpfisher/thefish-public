@@ -585,3 +585,9 @@ summary {
   color: #91baff;
   font-size: 0.9rem;
 }
+
+/* Public landing page: white background, blue mark and dark lettering. */
+.minimal-home { background: #fff; color: #18202d; color-scheme: light; }
+.minimal-home h1 { color: #18202d; }
+.minimal-home main > a { color: #1460c9; }
+.minimal-home :focus-visible { outline-color: #1460c9; }
