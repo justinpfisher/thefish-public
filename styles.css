@@ -598,6 +598,7 @@ summary {
   --surface: #fff; --mint: #edf3fc; --line: #e1e6ee;
   --muted: #64748b; --accent: #1767dc;
   color-scheme: light; background: var(--paper); color: var(--text);
+  min-height: 100vh; min-height: 100svh;
 }
 .app-body .app-wrap { max-width: 1260px; padding-top: 8px; }
 .app-body .site-header { height: 88px; max-width: 1260px; }
