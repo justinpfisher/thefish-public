@@ -696,3 +696,23 @@ summary {
 .board-card p { color: var(--muted); margin-top: 8px; }
 .board-signin { display: inline-flex; align-items: center; }
 @media(max-width:600px){ .board-wrap { margin-top: 32px; padding-inline: 20px; } .board-grid { grid-template-columns: 1fr; gap: 16px; } .board-card { padding: 24px; } .board-card strong { margin-top: 12px; } }
+
+
+/* Parent-only routine defaults: simple groups, easily tapped on mobile. */
+.schedule-settings summary { cursor: pointer; font-weight: 700; }
+.schedule-child, .schedule-weekdays { display: grid; gap: .65rem; border: 1px solid #d9dee5; border-radius: .75rem; padding: 1rem; min-width: 0; }
+.schedule-child legend, .schedule-weekdays legend { padding: 0 .4rem; font-weight: 700; }
+.schedule-weekdays { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+.schedule-days-off { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; }
+.schedule-days-off label { flex: 1 1 180px; }
+.schedule-off-list { display: flex; gap: .5rem; flex-wrap: wrap; }
+.schedule-day-off { display: flex; gap: .5rem; align-items: center; border: 1px solid #d9dee5; border-radius: .65rem; padding: .3rem .5rem; }
+
+/* Child screen-time recording: large, touch-friendly controls. */
+.usage-controls { display: grid; gap: 0.7rem; margin-top: 0.8rem; }
+.usage-controls .timer-readout { font-size: clamp(1.8rem, 8vw, 2.7rem); font-variant-numeric: tabular-nums; }
+.usage-controls .inline-form { margin-top: 0.25rem; }
+.usage-controls details { max-width: 100%; }
+
+/* Do not let an edit panel open while a transaction is rebuilding its form. */
+#bank[aria-busy="true"] details > summary { pointer-events: none; }
